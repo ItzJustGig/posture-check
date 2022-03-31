@@ -49,6 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnSkin = new System.Windows.Forms.Button();
+            this.comboSkins = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postureTimeUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakTimeUpDown)).BeginInit();
@@ -97,6 +99,7 @@
             // breakTimeUpDown
             // 
             resources.ApplyResources(this.breakTimeUpDown, "breakTimeUpDown");
+            this.breakTimeUpDown.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.breakTimeUpDown.DecimalPlaces = 1;
             this.breakTimeUpDown.Increment = new decimal(new int[] {
             1,
@@ -194,14 +197,31 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // btnSkin
+            // 
+            resources.ApplyResources(this.btnSkin, "btnSkin");
+            this.btnSkin.Name = "btnSkin";
+            this.btnSkin.UseVisualStyleBackColor = true;
+            this.btnSkin.Click += new System.EventHandler(this.btnSkin_Click);
+            // 
+            // comboSkins
+            // 
+            this.comboSkins.FormattingEnabled = true;
+            resources.ApplyResources(this.comboSkins, "comboSkins");
+            this.comboSkins.Name = "comboSkins";
+            this.comboSkins.SelectedIndexChanged += new System.EventHandler(this.comboSkins_SelectedIndexChanged);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboSkins);
+            this.Controls.Add(this.btnSkin);
             this.Controls.Add(this.tabController);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postureTimeUpDown)).EndInit();
@@ -237,6 +257,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnSkin;
+        private System.Windows.Forms.ComboBox comboSkins;
     }
 }
 

@@ -21,18 +21,28 @@ namespace posturecheck
         private int selectedSkin = 0;
         private SoundPlayer player = new SoundPlayer();
 
-        public Form1()
-        {
-            InitializeComponent();
-            timer.Interval = 2000;
-            GenerateSkins();
-        }
-
         struct Time
         {
             public int hour;
             public int min;
             public int sec;
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer.Interval = 1000; //1000 = 1 sec
+            GenerateSkins();
+
+            for(int i = 0; i < skins.SizeList();i++)
+            {
+                comboSkins.Items.Add(skins.GetSkins(i).nome);
+            }
+            comboSkins.SelectedIndex = 0;
         }
 
         private void changeEnabled(bool set)
@@ -74,6 +84,18 @@ namespace posturecheck
                 breakCheck = -1;
 
             timer.Start();
+
+            if (postureCheck > 0)
+            {
+                Time posture = ConvertTime(postureCheck);
+                lblPostureTime.Text = (posture.hour.ToString("00") + ":" + posture.min.ToString("00") + ":" + posture.sec.ToString("00"));
+            }
+
+            if (breakCheck > 0)
+            {
+                Time breakC = ConvertTime(breakCheck);
+                lblBreakTime.Text = (breakC.hour.ToString("00") + ":" + breakC.min.ToString("00") + ":" + breakC.sec.ToString("00"));
+            }
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -115,9 +137,9 @@ namespace posturecheck
             tempo.min = 0;
             tempo.hour = 0;
             
-            while (tempo.sec > 60)
+            while (tempo.sec >= 60)
             {
-                if (tempo.sec > 60)
+                if (tempo.sec >= 60)
                 {
                     tempo.min++;
                     tempo.sec -= 60;
@@ -172,6 +194,17 @@ namespace posturecheck
         private void GenerateSkins()
         {
             skins.SetSkin("Villager", "villager\\posture.wav", "villager\\break.wav");
+        }
+
+        private void btnSkin_Click(object sender, EventArgs e)
+        {
+            FormSkin formSkin = new FormSkin();
+            formSkin.ShowDialog();
+        }
+
+        private void comboSkins_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedSkin = comboSkins.SelectedIndex;
         }
     }
 }

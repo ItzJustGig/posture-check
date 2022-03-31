@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace posturecheck
 {
-    public partial class FormSkins : Form
+    public partial class FormSkin : Form
     {
-        public FormSkins()
+        public FormSkin()
         {
             InitializeComponent();
+        }
+
+        private void FormSkins_Load(object sender, EventArgs e)
+        {
+            GroupBox teste = gbTeste;
+
+            
         }
     }
 }

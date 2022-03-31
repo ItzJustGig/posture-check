@@ -31,3 +31,20 @@ C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.exe
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.pdb
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.FormSkins.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.csproj.AssemblyReference.cache
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.Form1.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.Properties.Resources.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.Form1.en.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.Form1.pt.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.csproj.GenerateResource.cache
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.csproj.CoreCompileInputs.cache
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\en\posturecheck.resources.dll
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.exe
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.pdb
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\posturecheck.FormSkin.resources
+D:\GitHub\posture-check\posturecheck\posturecheck\bin\Debug\posturecheck.exe.config
+D:\GitHub\posture-check\posturecheck\posturecheck\bin\Debug\posturecheck.exe
+D:\GitHub\posture-check\posturecheck\posturecheck\bin\Debug\posturecheck.pdb
+D:\GitHub\posture-check\posturecheck\posturecheck\bin\Debug\en\posturecheck.resources.dll
+D:\GitHub\posture-check\posturecheck\posturecheck\bin\Debug\pt\posturecheck.resources.dll
+D:\GitHub\posture-check\posturecheck\posturecheck\obj\Debug\pt\posturecheck.resources.dll

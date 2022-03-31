@@ -45,6 +45,11 @@ namespace posturecheck
             return skins[0];
         }
 
+        public int SizeList()
+        {
+            return skins.Count;
+        }
+
         public void SetSkin(string nome, string posture, string breakS)
         {
             Skin temp = new Skin();
