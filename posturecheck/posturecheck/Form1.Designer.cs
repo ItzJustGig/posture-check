@@ -75,6 +75,12 @@
             // postureTimeUpDown
             // 
             resources.ApplyResources(this.postureTimeUpDown, "postureTimeUpDown");
+            this.postureTimeUpDown.DecimalPlaces = 1;
+            this.postureTimeUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.postureTimeUpDown.Name = "postureTimeUpDown";
             this.postureTimeUpDown.Tag = "";
             this.toolTip.SetToolTip(this.postureTimeUpDown, resources.GetString("postureTimeUpDown.ToolTip"));
@@ -91,6 +97,12 @@
             // breakTimeUpDown
             // 
             resources.ApplyResources(this.breakTimeUpDown, "breakTimeUpDown");
+            this.breakTimeUpDown.DecimalPlaces = 1;
+            this.breakTimeUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.breakTimeUpDown.Name = "breakTimeUpDown";
             this.breakTimeUpDown.Tag = "";
             this.toolTip.SetToolTip(this.breakTimeUpDown, resources.GetString("breakTimeUpDown.ToolTip"));

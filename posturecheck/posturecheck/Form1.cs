@@ -14,18 +14,19 @@ namespace posturecheck
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-            timer.Interval = 200;
-        }
-
         private int postureCheck;
         private int breakCheck;
         private string directory = Directory.GetCurrentDirectory() + "\\sounds\\";
         private Skins skins = new Skins();
-        private int selectedSkin = 1;
+        private int selectedSkin = 0;
         private SoundPlayer player = new SoundPlayer();
+
+        public Form1()
+        {
+            InitializeComponent();
+            timer.Interval = 2000;
+            GenerateSkins();
+        }
 
         struct Time
         {
@@ -170,7 +171,7 @@ namespace posturecheck
 
         private void GenerateSkins()
         {
-            
+            skins.SetSkin("Villager", "villager\\posture.wav", "villager\\break.wav");
         }
     }
 }

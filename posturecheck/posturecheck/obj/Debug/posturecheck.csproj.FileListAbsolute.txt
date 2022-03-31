@@ -30,3 +30,4 @@ C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\pt\posturecheck.resources.dll
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.exe
 C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.pdb
+C:\Users\Formando\Desktop\phpasta\Nova pasta\posturecheck\posturecheck\obj\Debug\posturecheck.FormSkins.resources
