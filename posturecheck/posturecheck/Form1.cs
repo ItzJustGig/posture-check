@@ -17,11 +17,15 @@ namespace posturecheck
         public Form1()
         {
             InitializeComponent();
+            timer.Interval = 200;
         }
 
         private int postureCheck;
         private int breakCheck;
         private string directory = Directory.GetCurrentDirectory() + "\\sounds\\";
+        private Skins skins = new Skins();
+        private int selectedSkin = 1;
+        private SoundPlayer player = new SoundPlayer();
 
         struct Time
         {
@@ -95,6 +99,7 @@ namespace posturecheck
             timer.Dispose();
             lblPostureTime.Text = "00:00:00";
             lblBreakTime.Text = "00:00:00";
+            player.Stop();
         }
 
         private int RestartTimer(decimal val)
@@ -129,8 +134,8 @@ namespace posturecheck
 
         private void PlaySound(string path)
         {
-            SoundPlayer Sound = new SoundPlayer(path);
-            Sound.Play();
+            player = new SoundPlayer(path);
+            player.Play();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -151,16 +156,21 @@ namespace posturecheck
             
             if (postureCheck == 0)
             {
-                PlaySound(directory + "yes1.wav");
+                PlaySound(directory + skins.GetSkins(selectedSkin).postureSound);
                 postureCheck = RestartTimer(postureTimeUpDown.Value);
             }
 
             if (breakCheck == 0)
             {
-                PlaySound(directory + "yes1.wav");
+                PlaySound(directory + skins.GetSkins(selectedSkin).breakSound);
                 breakCheck = RestartTimer(breakTimeUpDown.Value);
             }
 
+        }
+
+        private void GenerateSkins()
+        {
+            
         }
     }
 }
