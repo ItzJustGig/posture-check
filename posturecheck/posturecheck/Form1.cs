@@ -17,8 +17,8 @@ namespace posturecheck
         private int postureCheck;
         private int breakCheck;
         private string directory = Directory.GetCurrentDirectory() + "\\sounds\\";
-        private Skins skins = new Skins();
-        private int selectedSkin = 0;
+        private Themes theme = new Themes();
+        private int selectedTheme = 0;
         private SoundPlayer player = new SoundPlayer();
 
         struct Time
@@ -36,13 +36,13 @@ namespace posturecheck
         private void Form1_Load(object sender, EventArgs e)
         {
             timer.Interval = 1000; //1000 = 1 sec
-            GenerateSkins();
+            GenerateThemes();
 
-            for(int i = 0; i < skins.SizeList();i++)
+            for(int i = 0; i < theme.SizeList();i++)
             {
-                comboSkins.Items.Add(skins.GetSkins(i).nome);
+                comboThemes.Items.Add(theme.GetThemes(i).nome);
             }
-            comboSkins.SelectedIndex = 0;
+            comboThemes.SelectedIndex = 0;
         }
 
         private void changeEnabled(bool set)
@@ -179,32 +179,33 @@ namespace posturecheck
             
             if (postureCheck == 0)
             {
-                PlaySound(directory + skins.GetSkins(selectedSkin).postureSound);
+                PlaySound(directory + theme.GetThemes(selectedTheme).postureSound);
                 postureCheck = RestartTimer(postureTimeUpDown.Value);
             }
 
             if (breakCheck == 0)
             {
-                PlaySound(directory + skins.GetSkins(selectedSkin).breakSound);
+                PlaySound(directory + theme.GetThemes(selectedTheme).breakSound);
                 breakCheck = RestartTimer(breakTimeUpDown.Value);
             }
 
         }
 
-        private void GenerateSkins()
+        private void GenerateThemes()
         {
-            skins.SetSkin("Villager", "villager\\posture.wav", "villager\\break.wav");
+            theme.CreateTheme("Villager", "villager\\posture.wav", "villager\\break.wav");
+            theme.CreateTheme("Ayaya", "ayaya\\posture.wav", "ayaya\\break.wav");
         }
 
-        private void btnSkin_Click(object sender, EventArgs e)
+        private void btnTheme_Click(object sender, EventArgs e)
         {
-            FormSkin formSkin = new FormSkin();
+            FormTheme formSkin = new FormTheme();
             formSkin.ShowDialog();
         }
 
         private void comboSkins_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedSkin = comboSkins.SelectedIndex;
+            selectedTheme = comboThemes.SelectedIndex;
         }
     }
 }

@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace posturecheck
 {
-    class Skins
+    class Themes
     {
-        public struct Skin
+        public struct Theme
         {
             public string nome;
             public string postureSound;
@@ -17,58 +17,58 @@ namespace posturecheck
             public string img;
         }
 
-        List<Skin> skins = new List<Skin>();
+        List<Theme> themes = new List<Theme>();
 
-        public Skins()
+        public Themes()
         {
-            Skin temp = new Skin();
+            Theme temp = new Theme();
             temp.nome = "Default";
             temp.postureSound = "\\default\\posture.wav";
             temp.breakSound = "\\default\\break.wav";
             temp.img = "\\default\\img.png";
 
-            skins.Add(temp);
+            themes.Add(temp);
         }
 
-        public List<Skin> GetSkins ()
+        public List<Theme> GetThemes ()
         {
-            return skins;
+            return themes;
         }
 
-        public Skin GetSkins(int id)
+        public Theme GetThemes(int id)
         {
-            for (int i = 0; i < skins.Count; i++)
+            for (int i = 0; i < themes.Count; i++)
             {
                 if (i == id)
-                    return skins[i];
+                    return themes[i];
             }
-            return skins[0];
+            return themes[0];
         }
 
         public int SizeList()
         {
-            return skins.Count;
+            return themes.Count;
         }
 
-        public void SetSkin(string nome, string posture, string breakS)
+        public void CreateTheme(string nome, string posture, string breakS)
         {
-            Skin temp = new Skin();
+            Theme temp = new Theme();
             temp.nome = nome;
             temp.postureSound = posture;
             temp.breakSound = breakS;
 
-            skins.Add(temp);
+            themes.Add(temp);
         }
 
-        public void SetSkin(string nome, string posture, string breakS, string img)
+        public void CreateTheme(string nome, string posture, string breakS, string img)
         {
-            Skin temp = new Skin();
+            Theme temp = new Theme();
             temp.nome = nome;
             temp.postureSound = posture;
             temp.breakSound = breakS;
             temp.img = img;
 
-            skins.Add(temp);
+            themes.Add(temp);
         }
 
     }

@@ -49,8 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btnSkin = new System.Windows.Forms.Button();
-            this.comboSkins = new System.Windows.Forms.ComboBox();
+            this.btnTheme = new System.Windows.Forms.Button();
+            this.comboThemes = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postureTimeUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakTimeUpDown)).BeginInit();
@@ -86,6 +86,11 @@
             this.postureTimeUpDown.Name = "postureTimeUpDown";
             this.postureTimeUpDown.Tag = "";
             this.toolTip.SetToolTip(this.postureTimeUpDown, resources.GetString("postureTimeUpDown.ToolTip"));
+            this.postureTimeUpDown.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // postureCheckBox
             // 
@@ -109,6 +114,11 @@
             this.breakTimeUpDown.Name = "breakTimeUpDown";
             this.breakTimeUpDown.Tag = "";
             this.toolTip.SetToolTip(this.breakTimeUpDown, resources.GetString("breakTimeUpDown.ToolTip"));
+            this.breakTimeUpDown.Value = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
             // 
             // groupBox2
             // 
@@ -197,26 +207,26 @@
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // btnSkin
+            // btnTheme
             // 
-            resources.ApplyResources(this.btnSkin, "btnSkin");
-            this.btnSkin.Name = "btnSkin";
-            this.btnSkin.UseVisualStyleBackColor = true;
-            this.btnSkin.Click += new System.EventHandler(this.btnSkin_Click);
+            resources.ApplyResources(this.btnTheme, "btnTheme");
+            this.btnTheme.Name = "btnTheme";
+            this.btnTheme.UseVisualStyleBackColor = true;
+            this.btnTheme.Click += new System.EventHandler(this.btnTheme_Click);
             // 
-            // comboSkins
+            // comboThemes
             // 
-            this.comboSkins.FormattingEnabled = true;
-            resources.ApplyResources(this.comboSkins, "comboSkins");
-            this.comboSkins.Name = "comboSkins";
-            this.comboSkins.SelectedIndexChanged += new System.EventHandler(this.comboSkins_SelectedIndexChanged);
+            this.comboThemes.FormattingEnabled = true;
+            resources.ApplyResources(this.comboThemes, "comboThemes");
+            this.comboThemes.Name = "comboThemes";
+            this.comboThemes.SelectedIndexChanged += new System.EventHandler(this.comboSkins_SelectedIndexChanged);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboSkins);
-            this.Controls.Add(this.btnSkin);
+            this.Controls.Add(this.comboThemes);
+            this.Controls.Add(this.btnTheme);
             this.Controls.Add(this.tabController);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
@@ -257,8 +267,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Button btnSkin;
-        private System.Windows.Forms.ComboBox comboSkins;
+        private System.Windows.Forms.Button btnTheme;
+        private System.Windows.Forms.ComboBox comboThemes;
     }
 }
 
